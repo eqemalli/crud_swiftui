@@ -27,23 +27,13 @@ struct PostFormView: View {
                         Text("Title")
                             .font(.headline)
                         TextEditor(text: $title)
-                            .frame(minHeight: 30)
-                            .padding(4)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
-                            )
+                            .styledTextEditor(minHeight: 30)
                     }
                     VStack(alignment: .leading) {
                         Text("Description")
                             .font(.headline)
                         TextEditor(text: $description)
-                            .frame(minHeight: 100)
-                            .padding(4)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color.gray.opacity(0.5), lineWidth: 0.5)
-                            )
+                            .styledTextEditor(minHeight: 100)
                     }
                 }
                 .padding()
